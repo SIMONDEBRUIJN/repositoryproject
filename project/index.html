@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Bombcodes</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="themes/war-theme.css"/>
+        <script src="http://code.jquery.com/jquery-1.12.1.min.js"> </script>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+        <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"> </script>
+        <script type="text/javascript" src="script.js"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+    </head>
+    <body>
+        <!--audio ticking bom -->
+        <audio controls id="riser" hidden="hidden" autostart="false">          
+          <source src="sounds/riser.mp3" type="audio/mpeg">        
+        </audio>
+        <!--audio boom -->
+        <audio controls id="boom" hidden="hidden" autostart="false">         
+          <source src="sounds/bomb_explosion.mp3" type="audio/mpeg">        
+        </audio>                
+        
+        <!--Pagina menu -->
+        
+        <div data-role="page" class="pagina" id="pagina_menu">
+            
+            <div data-role="header" class="header">Bomb codes</div>
+            
+            <div data-role="content" class="content2">                
+                <a href="#pagina_spel" data-role="button" data-transition="slideup" id="start">Start</a>
+                <h1>Highscores:</h1>
+                <div id="status" ></div>                
+            </div>
+            
+            
+        </div>
+        
+         <!--Pagina spel -->
+        
+        <div data-role="page" class="pagina" id="pagina_spel">
+            
+                      
+            <div data-role="header" class="header">
+                <a href="#pagina_menu" data-role="button" data-transition="slidedown" id="menu">Menu</a>                
+                <p>Bomb codes</p>            
+            </div>            
+            
+            <div data-role="content" id="content">
+                
+                <!-- raadsel -->
+                <div id="raadsel">
+                    
+                    <img src="img/load.jpg" class="rebus" id="rebus1">
+                    <img src="img/load.jpg" class="rebus" id="rebus2">
+                    <img src="img/load.jpg" class="rebus" id="rebus3">
+                    <img src="img/load.jpg" class="rebus" id="rebus4">
+                
+                </div>
+                <!--invoerveld -->
+                <label id="ingegevenCode">****</label>
+                
+                <!-- numeriek toetsenbord -->
+                <div id="toetsenbord">
+                    
+                    <!--nummers 1-3-->
+                    <div class="nummers">
+                        <a data-role="button" id="num1" class="num">1</a>
+                        <a data-role="button" id="num2" class="num">2</a>
+                        <a data-role="button" id="num3" class="num">3</a>
+                    </div>
+                    <!--nummers 4-6-->
+                    <div class="nummers">
+                        <a data-role="button" id="num4" class="num">4</a>
+                        <a data-role="button" id="num5" class="num">5</a>
+                        <a data-role="button" id="num6" class="num">6</a>
+                    </div>
+                    <!--nummers 7-9-->
+                    <div class="nummers">
+                        <a data-role="button" id="num7" class="num">7</a>
+                        <a data-role="button" id="num8" class="num">8</a>
+                        <a data-role="button" id="num9" class="num">9</a>
+                    </div>
+                    <!--nummers 0-->
+                    <div class="nummers">
+                        <a data-role="button" id="reset">start</a>
+                        <a data-role="button" id="num0" class="num">0</a>
+                        <a data-role="button" id="check">check</a>
+                    </div>
+                    
+                </div>
+                                
+                
+            </div>  
+            <!--footer -->                
+            <div data-role="footer" id="footer">
+                <label id="score">Bombs defused = 0</label>
+                <label id="time">Time = 60s</label>
+            </div>
+        </div>
+        
+        <!--Pagina game over -->
+        
+        <div data-role="page" class="pagina" id="pagina_gameOver">
+            
+            <div data-role="header" class="header">
+                <a href="#pagina_menu" data-role="button" data-transition="slideup" id="menu">Menu</a>                
+                <p>Bomb codes</p>            
+            </div>   
+            
+            <div data-role="content" class="content2">                                
+                <h1>Game Over</h1>
+                <img src="img/game_over.gif">
+                <label id="displayScore"></label>                
+            </div>            
+            
+        </div>
+        
+        
+
+    </body>
+    
+</html>
